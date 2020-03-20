@@ -1,0 +1,53 @@
+package Practice;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class DynamicProgramming {
+	
+	static int recursiveFib(int n) {
+		int result;
+		if(n==1 || n==2) {
+			result = 1;
+		} else {
+			result = recursiveFib(n-1) + recursiveFib(n-2);
+		}
+		return result;
+	}
+	//attempts to reduce redundancy by storing calculations instead of repeating the same calculation several times
+	static int memoizedFib(int n, int [] memo) {
+		int result;
+		if (memo[n-1]!= 0) {
+			result = memo[n];
+		}
+		if (n==1 || n==2) {
+			result = 1;
+		}
+		else {
+			result = memoizedFib(n-1, Arrays.copyOfRange(memo, 0, n-1)) + memoizedFib(n-2, Arrays.copyOfRange(memo, 0, n-2));
+		}
+		memo[n-1]=result;
+		return result;
+	}
+	//most efficient of the three (runs O(n) times)
+	static int bottomUpFib(int n) {
+		if (n==1 || n==2) {
+			return 1;
+		}
+		int [] bottomUp = new int [n+1];
+		bottomUp[1]=1;
+		bottomUp[2]=1;
+		for (int i=3;i<=n;i++) {
+			bottomUp[i]=bottomUp[i-1]+bottomUp[i-2];
+		}
+		return bottomUp[n];
+	}
+	public static void main(String [] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter a number :");
+		int n = scan.nextInt();
+		System.out.println("the fibonacci number in that position, using method 1, is "+recursiveFib(n));
+		int [] memo = new int [n];
+		System.out.println("the fibonacci number in that position, using method 2, is "+memoizedFib(n,memo));
+		System.out.println("the fibonacci number in that position, using method 3, is "+bottomUpFib(n));
+		scan.close();
+	}
