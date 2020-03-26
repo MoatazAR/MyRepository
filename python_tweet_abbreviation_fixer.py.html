@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>demo.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+demo.py</font>
+</center></td></tr></table>
+<pre><span class="s0">my_dict = {</span><span class="s1">'u'</span><span class="s0">:</span><span class="s1">'you'</span><span class="s2">,</span><span class="s1">'idk'</span><span class="s0">:</span><span class="s1">'I do not know'</span><span class="s2">,</span><span class="s1">'omw'</span><span class="s0">:</span><span class="s1">'on my way'</span><span class="s2">,</span><span class="s1">'r'</span><span class="s0">:</span><span class="s1">'are'</span><span class="s2">,</span><span class="s1">'tbh'</span><span class="s0">:</span><span class="s1">'to be honest'</span><span class="s2">,</span><span class="s1">'abt'</span><span class="s0">:</span><span class="s1">'about'</span><span class="s2">,</span><span class="s1">'b4'</span><span class="s0">:</span><span class="s1">'before'</span><span class="s2">,</span><span class="s1">'btw'</span><span class="s0">:</span><span class="s1">'by the way'</span><span class="s2">,</span><span class="s1">'lmk'</span><span class="s0">:</span><span class="s1">'let me know'</span><span class="s2">, </span><span class="s1">'c'</span><span class="s0">:</span><span class="s1">'see'</span><span class="s2">,</span><span class="s1">'ur'</span><span class="s0">:</span><span class="s1">'your'</span><span class="s2">,</span><span class="s1">'u</span><span class="s2">\'</span><span class="s1">r'</span><span class="s0">:</span><span class="s1">'you are'</span><span class="s2">,</span><span class="s1">'asap'</span><span class="s0">:</span><span class="s1">'as soon as possible'</span><span class="s2">,</span><span class="s1">'isn</span><span class="s2">\'</span><span class="s1">t'</span><span class="s0">:</span><span class="s1">'is not'</span><span class="s2">,</span><span class="s1">'aren</span><span class="s2">\'</span><span class="s1">t'</span><span class="s0">:</span><span class="s1">'are not'</span><span class="s2">,</span><span class="s1">'wasn</span><span class="s2">\'</span><span class="s1">t'</span><span class="s0">:</span><span class="s1">'was not'</span><span class="s2">,</span><span class="s1">'can</span><span class="s2">\'</span><span class="s1">t'</span><span class="s0">:</span><span class="s1">'can not'</span><span class="s2">,</span><span class="s1">'don</span><span class="s2">\'</span><span class="s1">t'</span><span class="s0">:</span><span class="s1">'do not'</span><span class="s2">, </span><span class="s1">'2'</span><span class="s0">:</span><span class="s1">'to'</span><span class="s2">, </span><span class="s1">'we</span><span class="s2">\'</span><span class="s1">ll'</span><span class="s0">:</span><span class="s1">'we will'</span><span class="s2">,</span><span class="s1">'who</span><span class="s2">\'</span><span class="s1">s'</span><span class="s0">:</span><span class="s1">'who is'</span><span class="s2">,</span><span class="s1">'brb'</span><span class="s0">:</span><span class="s1">'be right back'</span><span class="s2">,</span><span class="s1">'jk'</span><span class="s0">:</span><span class="s1">'just kidding'</span><span class="s2">,</span><span class="s1">'thx'</span><span class="s0">:</span><span class="s1">'thanks'</span><span class="s2">,</span><span class="s1">'i</span><span class="s2">\'</span><span class="s1">m'</span><span class="s0">:</span><span class="s1">'I am'</span><span class="s2">,</span><span class="s1">'we</span><span class="s2">\'</span><span class="s1">re'</span><span class="s0">:</span><span class="s1">'we are'</span><span class="s2">,</span><span class="s1">'i</span><span class="s2">\'</span><span class="s1">ve'</span><span class="s0">:</span><span class="s1">'I have'</span><span class="s2">,</span><span class="s1">'ppl'</span><span class="s0">:</span><span class="s1">'people'</span><span class="s2">,</span><span class="s1">'you</span><span class="s2">\'</span><span class="s1">re'</span><span class="s0">:</span><span class="s1">'you are'</span><span class="s2">,</span><span class="s1">'gonna'</span><span class="s0">:</span><span class="s1">'going to'</span><span class="s2">,</span><span class="s1">'plz'</span><span class="s0">:</span><span class="s1">'please'</span><span class="s0">}</span>
+<span class="s3">#program responsible for taking a file of tweets and creatign a new file with the corrected version of the tweets (changes abbreviations to full form)</span>
+<span class="s0">corrected_tweets = []</span>
+<span class="s0">tweet_file = open(</span><span class="s1">&quot;tweets.txt&quot;</span><span class="s2">,</span><span class="s1">&quot;r&quot;</span><span class="s0">)</span>
+<span class="s0">file_lines = tweet_file.readlines()</span>
+<span class="s2">for </span><span class="s0">line </span><span class="s2">in </span><span class="s0">file_lines:</span>
+    <span class="s0">my_tweet = line</span>
+    <span class="s0">my_tweet = my_tweet.replace(</span><span class="s1">&quot;,&quot;</span><span class="s2">, </span><span class="s1">&quot; ,&quot;</span><span class="s0">)</span>
+    <span class="s0">my_tweet = my_tweet.replace(</span><span class="s1">&quot;.&quot;</span><span class="s2">, </span><span class="s1">&quot; .&quot;</span><span class="s0">)</span>
+    <span class="s0">my_tweet = my_tweet.replace(</span><span class="s1">&quot;?&quot;</span><span class="s2">, </span><span class="s1">&quot; ?&quot;</span><span class="s0">)</span>
+    <span class="s0">words = my_tweet.split()</span>
+    <span class="s0">i = </span><span class="s4">0</span>
+    <span class="s0">j = len(words)</span>
+    <span class="s2">for </span><span class="s0">i </span><span class="s2">in </span><span class="s0">range(j):</span>
+        <span class="s2">if </span><span class="s0">words[i].lower() </span><span class="s2">in </span><span class="s0">my_dict:</span>
+            <span class="s0">words[i]=my_dict[words[i].lower()]</span>
+    <span class="s0">words[</span><span class="s4">0</span><span class="s0">]=words[</span><span class="s4">0</span><span class="s0">].capitalize()</span>
+    <span class="s0">final_tweet = </span><span class="s1">' '</span><span class="s0">.join(words)</span>
+    <span class="s0">final_tweet = final_tweet.replace(</span><span class="s1">&quot; ,&quot;</span><span class="s2">, </span><span class="s1">&quot;,&quot;</span><span class="s0">)</span>
+    <span class="s0">final_tweet = final_tweet.replace(</span><span class="s1">&quot; .&quot;</span><span class="s2">, </span><span class="s1">&quot;.&quot;</span><span class="s0">)</span>
+    <span class="s0">final_tweet = final_tweet.replace(</span><span class="s1">&quot; ?&quot;</span><span class="s2">, </span><span class="s1">&quot;?&quot;</span><span class="s0">)</span>
+    <span class="s0">corrected_tweets.append(final_tweet)</span>
+    <span class="s3">#print(final_tweet)</span>
+<span class="s0">tweet_file.close()</span>
+<span class="s0">new_tweets = open(</span><span class="s1">&quot;new_tweets.txt&quot;</span><span class="s2">,</span><span class="s1">&quot;w&quot;</span><span class="s0">)</span>
+<span class="s2">for </span><span class="s0">tweet </span><span class="s2">in </span><span class="s0">corrected_tweets:</span>
+    <span class="s0">new_tweets.write(</span><span class="s1">&quot;</span><span class="s2">\n</span><span class="s1">&quot;</span><span class="s0">+tweet)</span></pre>
+</body>
+</html>
